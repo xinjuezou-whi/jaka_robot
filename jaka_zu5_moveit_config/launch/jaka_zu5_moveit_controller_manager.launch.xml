@@ -8,6 +8,6 @@
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
   <!-- The rest of the params are specific to this plugin -->
-  <rosparam subst_value="true" file="$(find jaka_zu5_moveit_config)/config/controllers.yaml"/>
+  <rosparam subst_value="true" file="$(find jaka_zu5_moveit_config)/config/ros_controllers.yaml"/>
 
 </launch>
