@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   URDF:
     package: jaka_description
-    relative_path: urdf/jaka_zu3.urdf
+    relative_path: urdf/jaka_zu3.urdf.xacro
     xacro_args: ""
   SRDF:
     relative_path: config/jaka_zu3.srdf
