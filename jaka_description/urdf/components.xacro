@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!--link-->
+<xacro:macro name="link_arm" params="name prefix:='' ixyz:= '0 0 0' irpy:='0 0 0' ixx:='0' ixy:='0' ixz:='0' iyy:='0' iyz:='0' izz:='0' mass:='0'
+    xyz:='0 0 0' rpy:='0 0 0' rgba:='1 1 1 1' stl_path:='' dae_path:='' gazebo:=false">
+  <!--sub-link defining detailed meshes for collision with environment-->
+  <link name="${prefix}link_${name}">
+    <inertial>
+      <origin xyz="${ixyz}" rpy="${irpy}"/>
+      <mass value="${mass}"/>
+      <inertia ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
+    </inertial>
+    <visual>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <geometry>
+        <xacro:if value="${dae_path == ''}">
+          <mesh filename="${stl_path}"/>
+        </xacro:if>
+        <xacro:unless value="${dae_path == ''}">
+          <mesh filename="${dae_path}"/>
+        </xacro:unless>
+      </geometry>
+    </visual>
+    <collision>
+     <origin xyz="${xyz}" rpy="${rpy}"/>
+      <geometry>
+        <mesh filename="${stl_path}"/>
+      </geometry>
+      <material name="">
+        <color rgba="${rgba}" />
+      </material>
+    </collision>
+    <xacro:if value="${gazebo}">
+      <xacro:inertial_props name="${name}"/>
+    </xacro:if>
+  </link>
+</xacro:macro>
+
+</robot>

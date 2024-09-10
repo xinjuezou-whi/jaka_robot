@@ -39,7 +39,7 @@
     <arg name="urdf_file" value="$(arg urdf_file)"/>
     <arg name="srdf_file" value="$(arg srdf_file)"/>
     <arg name="allow_trajectory_execution" value="true"/>
-    <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" />
+    <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
     <arg name="fake_execution_type" value="$(arg fake_execution_type)"/>
     <arg name="info" value="true"/>
     <arg name="debug" value="$(arg debug)"/>

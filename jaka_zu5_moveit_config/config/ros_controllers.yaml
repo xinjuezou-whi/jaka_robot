@@ -1,5 +1,5 @@
 controller_list:
-  - name: jaka_arm/controllers/scaled_pos_controller
+  - name: whi_arm_interface/controllers/scaled_pos_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     joints:
