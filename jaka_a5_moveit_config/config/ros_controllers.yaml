@@ -1,6 +1,6 @@
 # Simulation settings for using moveit_sim_controllers
 moveit_sim_hw_interface:
-  joint_model_group: jaka_zu12
+  joint_model_group: jaka_a5
   joint_model_group_pose: zero
 # Settings for ros_control_boilerplate control loop
 generic_hw_control_loop:
@@ -22,7 +22,7 @@ joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
 controller_list:
-  - name: jaka_zu12_controller
+  - name: jaka_a5_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
@@ -33,7 +33,7 @@ controller_list:
       - joint_4
       - joint_5
       - joint_6
-jaka_zu12_controller:
+jaka_a5_controller:
   type: position_controllers/JointTrajectoryController
   joints:
       - joint_1
