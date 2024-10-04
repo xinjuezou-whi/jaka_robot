@@ -59,6 +59,14 @@
         <joint name="joint_5" value="-1.5707"/>
         <joint name="joint_6" value="0"/>
     </group_state>
+    <group_state name="begin_inspection" group="jaka_zu5">
+        <joint name="joint_1" value="1.5707"/>
+        <joint name="joint_2" value="1.0471"/>
+        <joint name="joint_3" value="-2.0943"/>
+        <joint name="joint_4" value="4.1879"/>
+        <joint name="joint_5" value="1.5707"/>
+        <joint name="joint_6" value="0"/>
+    </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
