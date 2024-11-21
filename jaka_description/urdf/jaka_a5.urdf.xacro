@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="jaka_a5" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find jaka_description)/urdf/jaka_a5.xacro"/>
+
+  <xacro:jaka_arm/>
+
+</robot>

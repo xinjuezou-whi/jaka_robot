@@ -3,7 +3,7 @@
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
 -->
-<robot name="jaka_a5">
+<robot name="NaviBOT_combined_jakaa5">
     <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
     <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
@@ -11,7 +11,6 @@
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="jaka_a5">
         <joint name="virtual_joint"/>
-        <joint name="fixed"/>
         <joint name="joint_1"/>
         <joint name="joint_2"/>
         <joint name="joint_3"/>
@@ -60,8 +59,16 @@
         <joint name="joint_5" value="-1.5707"/>
         <joint name="joint_6" value="0"/>
     </group_state>
+    <group_state name="begin_inspection" group="jaka_a5">
+        <joint name="joint_1" value="1.5707"/>
+        <joint name="joint_2" value="1.0471"/>
+        <joint name="joint_3" value="-2.0943"/>
+        <joint name="joint_4" value="4.1879"/>
+        <joint name="joint_5" value="1.5707"/>
+        <joint name="joint_6" value="0"/>
+    </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="link_0"/>
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="link_0" link2="link_1" reason="Adjacent"/>
     <disable_collisions link1="link_1" link2="link_2" reason="Adjacent"/>
@@ -72,4 +79,5 @@
     <disable_collisions link1="link_4" link2="link_5" reason="Adjacent"/>
     <disable_collisions link1="link_4" link2="link_6" reason="Never"/>
     <disable_collisions link1="link_5" link2="link_6" reason="Adjacent"/>
+    <disable_collisions link1="link_6" link2="link_tool_extension" reason="Adjacent"/>
 </robot>
