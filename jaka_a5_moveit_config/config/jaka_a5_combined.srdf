@@ -51,6 +51,14 @@
         <joint name="joint_5" value="1.5707"/>
         <joint name="joint_6" value="0"/>
     </group_state>
+    <group_state name="ready_inspection_down" group="jaka_a5">
+        <joint name="joint_1" value="0"/>
+        <joint name="joint_2" value="0.7853"/>
+        <joint name="joint_3" value="-1.5707"/>
+        <joint name="joint_4" value="0.7853"/>
+        <joint name="joint_5" value="-1.5707"/>
+        <joint name="joint_6" value="3.1416"/>
+    </group_state>
     <group_state name="fold_inspection" group="jaka_a5">
         <joint name="joint_1" value="0"/>
         <joint name="joint_2" value="-0.7853"/>
@@ -66,6 +74,54 @@
         <joint name="joint_4" value="4.1879"/>
         <joint name="joint_5" value="1.5707"/>
         <joint name="joint_6" value="0"/>
+    </group_state>
+    <group_state name="begin_inspection_down" group="jaka_a5">
+        <joint name="joint_1" value="1.5707"/>
+        <joint name="joint_2" value="1.0471"/>
+        <joint name="joint_3" value="-2.0943"/>
+        <joint name="joint_4" value="1.0471"/>
+        <joint name="joint_5" value="-1.5707"/>
+        <joint name="joint_6" value="3.1416"/>
+    </group_state>
+    <group_state name="standby_tool" group="jaka_a5">
+        <joint name="joint_1" value="-0.275360596"/>
+        <joint name="joint_2" value="1.060409694"/>
+        <joint name="joint_3" value="-2.416268723"/>
+        <joint name="joint_4" value="2.924735494"/>
+        <joint name="joint_5" value="1.557200212"/>
+        <joint name="joint_6" value="-0.267122642"/>
+    </group_state>
+    <group_state name="grabbing_handle" group="jaka_a5">
+        <joint name="joint_1" value="-0.040264746"/>
+        <joint name="joint_2" value="0.546270603"/>
+        <joint name="joint_3" value="-2.537097867"/>
+        <joint name="joint_4" value="3.556841389"/>
+        <joint name="joint_5" value="1.574060092"/>
+        <joint name="joint_6" value="-0.077614792"/>
+    </group_state>
+    <group_state name="releasing_handle" group="jaka_a5">
+        <joint name="joint_1" value="-0.040264746"/>
+        <joint name="joint_2" value="0.888791468"/>
+        <joint name="joint_3" value="-2.606125639"/>
+        <joint name="joint_4" value="3.283348295"/>
+        <joint name="joint_5" value="1.574060092"/>
+        <joint name="joint_6" value="-0.077614792"/>
+    </group_state>
+    <group_state name="grabbing_ehandle" group="jaka_a5">
+        <joint name="joint_1" value="-0.619207912"/>
+        <joint name="joint_2" value="0.570425959"/>
+        <joint name="joint_3" value="-2.545527807"/>
+        <joint name="joint_4" value="3.540033869"/>
+        <joint name="joint_5" value="1.574391705"/>
+        <joint name="joint_6" value="-0.643886868"/>
+    </group_state>
+    <group_state name="releasing_ehandle" group="jaka_a5">
+        <joint name="joint_1" value="-0.619207912"/>
+        <joint name="joint_2" value="1.04475409"/>
+        <joint name="joint_3" value="-2.612321558"/>
+        <joint name="joint_4" value="3.132499488"/>
+        <joint name="joint_5" value="1.574391705"/>
+        <joint name="joint_6" value="-0.643886868"/>
     </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
