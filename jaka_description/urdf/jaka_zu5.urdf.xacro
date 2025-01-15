@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- author: xinjue.zou.whi@gmail.com -->
 <robot name="jaka_zu5" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find jaka_description)/urdf/jaka_zu5.xacro"/>
 
